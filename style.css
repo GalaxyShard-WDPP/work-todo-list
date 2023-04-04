@@ -1,0 +1,23 @@
+body {
+    background: linear-gradient(to bottom right, #20ffff, #7fff20);
+    min-height:100vh;
+}
+.container-fluid {
+    background-color: white;
+    max-width:500px;
+    width:90%;
+    margin:10px auto 10px auto;
+}
+#items button {
+    border:none;
+    margin:0 0 0 5px;
+    background-color: transparent;
+    user-select:none;
+}
+#items > div {
+    padding:10px;
+    border-radius:5px;
+}
+#items > div:nth-child(even) {
+    background-color: #eeeeee;
+}
