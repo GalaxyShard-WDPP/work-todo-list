@@ -21,3 +21,6 @@ body {
 #items > div:nth-child(even) {
     background-color: #eeeeee;
 }
+.h1 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
