@@ -2,7 +2,6 @@
 
 let addButton = document.getElementById("add");
 let items = document.getElementById("items");
-let seperator = document.getElementById("extra-seperator");
 
 let listItems = [];
 
@@ -27,16 +26,10 @@ function addListItem() {
     remove.addEventListener("click", () => {
         listItems.splice(listItems.find(a=>a.item==item), 1);
         container.remove();
-        
-        console.log("saving on remove");
-        updateStorage();
 
-        if (listItems.length == 0) {
-            seperator.setAttribute("hidden", "");
-        }
+        updateStorage();
     });
     item.addEventListener("blur", () => {
-        console.log("saving onblur");
         updateStorage();
     });
 
@@ -59,5 +52,4 @@ addButton.addEventListener("click", () => {
     let item = addListItem();
     updateStorage();
     item.focus();
-    seperator.removeAttribute("hidden");
 });
